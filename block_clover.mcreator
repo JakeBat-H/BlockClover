@@ -1,10 +1,32 @@
 {
   "id_map": {},
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "GrimoireTest",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "grimoire_test"
+    },
+    {
+      "name": "UnidentifiedGrimoire",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "unidentified_grimoire"
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.block_clover.unidentified_grimoire": "Unidentified Grimoire",
+      "item.block_clover.grimoire_test": "Grimoire Test"
+    }
   },
   "workspaceSettings": {
     "modid": "block_clover",
