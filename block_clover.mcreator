@@ -1,34 +1,6 @@
 {
   "id_map": {},
-  "mod_elements": [
-    {
-      "name": "Grimoire",
-      "type": "item",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "grimoire"
-    },
-    {
-      "name": "UnidentifiedGrimoire",
-      "type": "item",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "unidentified_grimoire"
-    },
-    {
-      "name": "BlueElementalGem",
-      "type": "item",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "registry_name": "blue_elemental_gem"
-    }
-  ],
+  "mod_elements": [],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
