@@ -18,15 +18,21 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "unidentified_grimoire"
+    },
+    {
+      "name": "BlueElementalGem",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "blue_elemental_gem"
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
-    "en_us": {
-      "item.block_clover.grimoire": "Grimoire",
-      "item.block_clover.unidentified_grimoire": "Unidentified Grimoire"
-    }
+    "en_us": {}
   },
   "workspaceSettings": {
     "modid": "block_clover",

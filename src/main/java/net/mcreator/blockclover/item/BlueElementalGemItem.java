@@ -2,12 +2,12 @@
 package net.mcreator.blockclover.item;
 
 @BlockCloverModElements.ModElement.Tag
-public class GrimoireItem extends BlockCloverModElements.ModElement {
+public class BlueElementalGemItem extends BlockCloverModElements.ModElement {
 
-	@ObjectHolder("block_clover:grimoire")
+	@ObjectHolder("block_clover:blue_elemental_gem")
 	public static final Item block = null;
 
-	public GrimoireItem(BlockCloverModElements instance) {
+	public BlueElementalGemItem(BlockCloverModElements instance) {
 		super(instance, 1);
 
 	}
@@ -20,8 +20,8 @@ public class GrimoireItem extends BlockCloverModElements.ModElement {
 	public static class ItemCustom extends Item {
 
 		public ItemCustom() {
-			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1).rarity(Rarity.EPIC));
-			setRegistryName("grimoire");
+			super(new Item.Properties().group(ItemGroup.MISC).maxStackSize(64).rarity(Rarity.COMMON));
+			setRegistryName("blue_elemental_gem");
 		}
 
 		@Override
@@ -37,6 +37,12 @@ public class GrimoireItem extends BlockCloverModElements.ModElement {
 		@Override
 		public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 			return 1F;
+		}
+
+		@Override
+		@OnlyIn(Dist.CLIENT)
+		public boolean hasEffect(ItemStack itemstack) {
+			return true;
 		}
 
 	}
