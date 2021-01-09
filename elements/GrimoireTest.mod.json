@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 1,
     "texture": "unidentifiedtome",
-    "customModelName": "grimoire:default",
+    "customModelName": "grimoire_blue:default",
     "name": "Grimoire Test",
     "rarity": "EPIC",
     "creativeTab": {

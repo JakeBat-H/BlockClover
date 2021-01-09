@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "blue",
+        "1": "black_actually",
+        "2": "white",
+        "3": "gold"
+      },
+      "name": "default"
+    }
+  }
+}
