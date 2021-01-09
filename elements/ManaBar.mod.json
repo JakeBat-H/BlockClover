@@ -1,0 +1,30 @@
+{
+  "_fv": 15,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "mana_bar_full.png",
+          "use1Xscale": true,
+          "name": "mana_bar_full.png",
+          "x": 272,
+          "y": 149
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "mana_bar_base.png",
+          "use1Xscale": true,
+          "name": "mana_bar_base.png",
+          "x": 272,
+          "y": 149
+        }
+      }
+    ],
+    "baseTexture": ""
+  }
+}

@@ -18,9 +18,25 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "unidentified_grimoire"
+    },
+    {
+      "name": "ManaBar",
+      "type": "overlay",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "mana_bar"
     }
   ],
-  "variable_elements": [],
+  "variable_elements": [
+    {
+      "name": "Mana",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    }
+  ],
   "sound_elements": [],
   "language_map": {
     "en_us": {
