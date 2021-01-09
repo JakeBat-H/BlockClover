@@ -1,6 +1,7 @@
 {
-  "parent": "block_clover:custom/grimoire",
+  "parent": "block_clover:custom/grimoire_blue",
   "textures": {
+    "0": "block_clover:blocks/blue",
     "1": "block_clover:blocks/black_actually",
     "2": "block_clover:blocks/white",
     "3": "block_clover:blocks/gold",
