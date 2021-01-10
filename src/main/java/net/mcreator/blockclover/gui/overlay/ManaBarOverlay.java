@@ -14,6 +14,11 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.client.Minecraft;
 
 import net.mcreator.blockclover.BlockCloverModElements;
+import net.mcreator.blockclover.BlockCloverModVariables;
+import net.mcreator.blockclover.BlockCloverModElements;
+import net.mcreator.blockclover.BlockCloverMod;
+
+
 
 import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
@@ -41,6 +46,12 @@ public class ManaBarOverlay extends BlockCloverModElements.ModElement {
 			double y = entity.getPosY();
 			double z = entity.getPosZ();
 			if (true) {
+				double currentMana = ((entity.getCapability(BlockCloverModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new BlockCloverModVariables.PlayerVariables())).Mana);
+				double maxMana = ((entity.getCapability(BlockCloverModVariables.PLAYER_VARIABLES_CAPABILITY, null)
+				.orElse(new BlockCloverModVariables.PlayerVariables())).MaxMana);
+				double manaPercent = currentMana / maxMana;
+				System.out.println("CurrentMana " + String.valueOf(currentMana) + ", MaxMana" +  String.valueOf(maxMana) + ", ManaPercent " + String.valueOf(manaPercent));
 				RenderSystem.disableDepthTest();
 				RenderSystem.depthMask(false);
 				RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA,
@@ -48,7 +59,8 @@ public class ManaBarOverlay extends BlockCloverModElements.ModElement {
 				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 				RenderSystem.disableAlphaTest();
 				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("block_clover:textures/mana_bar_full.png"));
-				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + 59, posY + 29, 0, 0, 125, 50, 125, 50);
+				//draw mana bar (change this one)
+				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + 89, posY + 70, 0, 0, (int)(manaPercent * 125.0f), 50, (int)(manaPercent * 125.0f), 50);
 				RenderSystem.depthMask(true);
 				RenderSystem.enableDepthTest();
 				RenderSystem.enableAlphaTest();
@@ -60,7 +72,8 @@ public class ManaBarOverlay extends BlockCloverModElements.ModElement {
 				RenderSystem.color4f(1.0F, 1.0F, 1.0F, 1.0F);
 				RenderSystem.disableAlphaTest();
 				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("block_clover:textures/mana_bar_base.png"));
-				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + 59, posY + 29, 0, 0, 125, 50, 125, 50);
+				//draw mana bar base
+				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + 89, posY + 70, 0, 0, 125, 50, 125, 50);
 				RenderSystem.depthMask(true);
 				RenderSystem.enableDepthTest();
 				RenderSystem.enableAlphaTest();

@@ -24,17 +24,148 @@
       "type": "overlay",
       "sortid": 3,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "mana_bar"
+    },
+    {
+      "name": "GrimoireTestRightClickedInAir",
+      "type": "procedure",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "grimoire_test_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ManaRegen",
+      "type": "procedure",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "mana_regen",
+      "metadata": {
+        "dependencies": []
+      }
+    },
+    {
+      "name": "SetManaCommandCommandExecuted",
+      "type": "procedure",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "set_mana_command_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetManaCommand",
+      "type": "command",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "set_mana_command"
+    },
+    {
+      "name": "SetMaxManaCommandExecuted",
+      "type": "procedure",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "set_max_mana_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetMaxMana",
+      "type": "command",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "set_max_mana"
+    },
+    {
+      "name": "SetManaRegenCommandExecuted",
+      "type": "procedure",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "set_mana_regen_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "cmdparams",
+            "type": "map"
+          }
+        ]
+      }
+    },
+    {
+      "name": "SetManaRegen",
+      "type": "command",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "set_mana_regen"
     }
   ],
   "variable_elements": [
     {
       "name": "Mana",
       "type": "number",
-      "scope": "player_persistent",
-      "value": "0.0"
+      "scope": "player_lifetime",
+      "value": "100.0"
+    },
+    {
+      "name": "ManaRegen",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "5.0"
+    },
+    {
+      "name": "MaxMana",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "100.0"
     }
   ],
   "sound_elements": [],

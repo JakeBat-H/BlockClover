@@ -68,6 +68,8 @@ public class BlockCloverModVariables {
 		public INBT writeNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side) {
 			CompoundNBT nbt = new CompoundNBT();
 			nbt.putDouble("Mana", instance.Mana);
+			nbt.putDouble("ManaRegen", instance.ManaRegen);
+			nbt.putDouble("MaxMana", instance.MaxMana);
 			return nbt;
 		}
 
@@ -75,11 +77,15 @@ public class BlockCloverModVariables {
 		public void readNBT(Capability<PlayerVariables> capability, PlayerVariables instance, Direction side, INBT inbt) {
 			CompoundNBT nbt = (CompoundNBT) inbt;
 			instance.Mana = nbt.getDouble("Mana");
+			instance.ManaRegen = nbt.getDouble("ManaRegen");
+			instance.MaxMana = nbt.getDouble("MaxMana");
 		}
 	}
 
 	public static class PlayerVariables {
-		public double Mana = 0.0;
+		public double Mana = 100.0;
+		public double ManaRegen = 5.0;
+		public double MaxMana = 100.0;
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayerEntity)
 				BlockCloverMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayerEntity) entity),
@@ -114,7 +120,6 @@ public class BlockCloverModVariables {
 					.orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 					.orElse(new PlayerVariables()));
-			clone.Mana = original.Mana;
 		}
 	}
 	public static class PlayerVariablesSyncMessage {
@@ -139,6 +144,8 @@ public class BlockCloverModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null)
 							.orElse(new PlayerVariables()));
 					variables.Mana = message.data.Mana;
+					variables.ManaRegen = message.data.ManaRegen;
+					variables.MaxMana = message.data.MaxMana;
 				}
 			});
 			context.setPacketHandled(true);

@@ -4,7 +4,7 @@
   "definition": {
     "renderType": 1,
     "texture": "unidentifiedtome",
-    "customModelName": "grimoire_blue:default",
+    "customModelName": "grimoire:default",
     "name": "Grimoire Test",
     "rarity": "EPIC",
     "creativeTab": {
@@ -27,6 +27,12 @@
     "hasGlow": false,
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
-    "inventoryStackSize": 64
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "GrimoireTestRightClickedInAir"
+    },
+    "onRightClickedOnBlock": {
+      "name": "GrimoireTestRightClickedInAir"
+    }
   }
 }
