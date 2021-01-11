@@ -1,0 +1,49 @@
+{
+  "_fv": 15,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "text": "Mana Values",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "Mana Values",
+          "x": 2,
+          "y": 2
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "",
+          "x": 3,
+          "y": 15
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "label",
+          "color": {
+            "value": -12829636,
+            "falpha": 0.0
+          },
+          "name": "label",
+          "x": 4,
+          "y": 13
+        }
+      }
+    ],
+    "baseTexture": ""
+  }
+}

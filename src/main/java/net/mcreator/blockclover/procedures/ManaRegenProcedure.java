@@ -39,7 +39,7 @@ public class ManaRegenProcedure extends BlockCloverModElements.ModElement {
 				.orElse(new BlockCloverModVariables.PlayerVariables())).ManaRegen);
 			double currentMana = (((entity.getCapability(BlockCloverModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 						.orElse(new BlockCloverModVariables.PlayerVariables())).Mana));
-			if(false)//!(currentMana >= 100))
+			if(!(currentMana >= 100))
 			{
 			double _setval = (double) currentMana + 0.2;
 				entity.getCapability(BlockCloverModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

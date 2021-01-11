@@ -51,7 +51,7 @@ public class ManaBarOverlay extends BlockCloverModElements.ModElement {
 				double maxMana = ((entity.getCapability(BlockCloverModVariables.PLAYER_VARIABLES_CAPABILITY, null)
 				.orElse(new BlockCloverModVariables.PlayerVariables())).MaxMana);
 				double manaPercent = currentMana / maxMana;
-				System.out.println("CurrentMana " + String.valueOf(currentMana) + ", MaxMana" +  String.valueOf(maxMana) + ", ManaPercent " + String.valueOf(manaPercent));
+				//System.out.println("CurrentMana " + String.valueOf(currentMana) + ", MaxMana" +  String.valueOf(maxMana) + ", ManaPercent " + String.valueOf(manaPercent));
 				RenderSystem.disableDepthTest();
 				RenderSystem.depthMask(false);
 				RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA,
@@ -60,7 +60,7 @@ public class ManaBarOverlay extends BlockCloverModElements.ModElement {
 				RenderSystem.disableAlphaTest();
 				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("block_clover:textures/mana_bar_full.png"));
 				//draw mana bar (change this one)
-				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + 89, posY + 70, 0, 0, (int)(manaPercent * 125.0f), 50, (int)(manaPercent * 125.0f), 50);
+				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + 109, posY + 96, 0, 0, (int)(manaPercent * 100.0f), 25, (int)(manaPercent * 100.0f), 25);
 				RenderSystem.depthMask(true);
 				RenderSystem.enableDepthTest();
 				RenderSystem.enableAlphaTest();
@@ -73,7 +73,7 @@ public class ManaBarOverlay extends BlockCloverModElements.ModElement {
 				RenderSystem.disableAlphaTest();
 				Minecraft.getInstance().getTextureManager().bindTexture(new ResourceLocation("block_clover:textures/mana_bar_base.png"));
 				//draw mana bar base
-				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + 89, posY + 70, 0, 0, 125, 50, 125, 50);
+				Minecraft.getInstance().ingameGUI.blit(event.getMatrixStack(), posX + 109, posY + 96, 0, 0, 100, 25, 100, 25);
 				RenderSystem.depthMask(true);
 				RenderSystem.enableDepthTest();
 				RenderSystem.enableAlphaTest();

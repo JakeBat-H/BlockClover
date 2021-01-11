@@ -146,6 +146,24 @@
       "locked_code": false,
       "ids": {},
       "registry_name": "set_mana_regen"
+    },
+    {
+      "name": "ManaDebug",
+      "type": "overlay",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "mana_debug"
+    },
+    {
+      "name": "PlayerStats",
+      "type": "code",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "player_stats"
     }
   ],
   "variable_elements": [
