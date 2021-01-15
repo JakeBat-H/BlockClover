@@ -24,10 +24,10 @@ public class GrimoireTestRightClickedInAirProcedure extends BlockCloverModElemen
 		}
 		Entity entity = (Entity) dependencies.get("entity");
 		if (((((entity.getCapability(BlockCloverModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-				.orElse(new BlockCloverModVariables.PlayerVariables())).Mana) - 50) >= 0)) {
+				.orElse(new BlockCloverModVariables.PlayerVariables())).Mana) - 10) >= 0)) {
 			{
 				double _setval = (double) (((entity.getCapability(BlockCloverModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new BlockCloverModVariables.PlayerVariables())).Mana) - 50);
+						.orElse(new BlockCloverModVariables.PlayerVariables())).Mana) - 10);
 				entity.getCapability(BlockCloverModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.Mana = _setval;
 					capability.syncPlayerVariables(entity);

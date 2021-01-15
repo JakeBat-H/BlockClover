@@ -6,7 +6,7 @@
       "type": "item",
       "sortid": 1,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "grimoire_test"
     },
@@ -164,6 +164,57 @@
       "locked_code": true,
       "ids": {},
       "registry_name": "player_stats"
+    },
+    {
+      "name": "UnidentifiedGrimoireRightClickedInAir",
+      "type": "procedure",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "unidentified_grimoire_right_clicked_in_air",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ResetPlayerGrimoireCommandExecuted",
+      "type": "procedure",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "reset_player_grimoire_command_executed",
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "ResetPlayerGrimoire",
+      "type": "command",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "registry_name": "reset_player_grimoire"
     }
   ],
   "variable_elements": [
@@ -207,8 +258,9 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "forge-1.16.4",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
     "modElementsPackage": "net.mcreator.blockclover",
-    "lockBaseModFiles": false
+    "lockBaseModFiles": true
   },
   "mcreatorVersion": 202000652319
 }

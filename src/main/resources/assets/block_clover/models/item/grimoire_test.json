@@ -5,5 +5,25 @@
     "2": "block_clover:blocks/white",
     "3": "block_clover:blocks/gold",
     "particle": "block_clover:items/unidentifiedtome"
-  }
+  },
+    "overrides": [
+        {
+            "predicate": {
+                "type": 1
+            },
+            "model": "block_clover:custom/grimoire_blue"
+        },
+        {
+            "predicate": {
+                "type": 2
+            },
+            "model": "block_clover:custom/grimoire_green"
+        },
+        {
+            "predicate": {
+                "type": 3
+            },
+            "model": "block_clover:custom/grimoire_red"
+        }
+    ]
 }

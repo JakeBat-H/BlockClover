@@ -22,6 +22,14 @@ import net.mcreator.blockclover.BlockCloverModElements;
 
 import java.util.Map;
 import java.util.HashMap;
+import net.minecraft.item.ItemModelsProperties;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.entity.LivingEntity;
+import net.minecraft.client.world.ClientWorld;
+import net.minecraft.nbt.CompoundNBT;
+import net.minecraft.nbt.StringNBT;
+import net.minecraft.world.gen.feature.BlueIceFeature;
+import net.minecraft.entity.Entity;
 
 @BlockCloverModElements.ModElement.Tag
 public class GrimoireTestItem extends BlockCloverModElements.ModElement {
@@ -39,7 +47,30 @@ public class GrimoireTestItem extends BlockCloverModElements.ModElement {
 		public ItemCustom() {
 			super(new Item.Properties().group(ItemGroup.COMBAT).maxStackSize(1).rarity(Rarity.EPIC));
 			setRegistryName("grimoire_test");
+			ItemModelsProperties.registerProperty(this, new ResourceLocation("type"), (stack, world, entity) -> {
+				String type = stack.getTag().getString("grimoireType");
+				switch(type)
+				{
+					case "blue":
+						return 1;
+					case "green":
+						return 2;
+					case"red":
+						return 3;
+				}
+				return 0;
+			});
+				
 		}
+
+		@Override
+		public void inventoryTick(ItemStack stack, World worldIn, Entity entityIn, int itemSlot, boolean isSelected) {
+			PlayerEntity player = (PlayerEntity) entityIn;
+			if(player.inventory.offHandInventory.contains(stack))
+				{
+					
+				}
+ 		}
 
 		@Override
 		public int getItemEnchantability() {
