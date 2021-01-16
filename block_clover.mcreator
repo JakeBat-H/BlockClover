@@ -6,7 +6,7 @@
       "type": "item",
       "sortid": 1,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "ids": {},
       "registry_name": "grimoire_test"
     },
@@ -164,6 +164,15 @@
       "locked_code": true,
       "ids": {},
       "registry_name": "player_stats"
+    },
+    {
+      "name": "GrimoireFire",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": true,
+      "ids": {},
+      "registry_name": "grimoire_fire"
     }
   ],
   "variable_elements": [
@@ -190,7 +199,8 @@
   "language_map": {
     "en_us": {
       "item.block_clover.unidentified_grimoire": "Unidentified Grimoire",
-      "item.block_clover.grimoire_test": "Grimoire Test"
+      "item.block_clover.grimoire_test": "Grimoire Test",
+      "item.block_clover.grimoire_fire": "Grimoire Fire"
     }
   },
   "workspaceSettings": {

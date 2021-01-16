@@ -1,0 +1,10 @@
+{
+  "parent": "block_clover:custom/grimoire_red",
+  "textures": {
+    "1": "block_clover:blocks/red",
+    "2": "block_clover:blocks/black_actually",
+    "3": "block_clover:blocks/white",
+    "5": "block_clover:blocks/gold",
+    "particle": "block_clover:items/unidentifiedtome"
+  }
+}

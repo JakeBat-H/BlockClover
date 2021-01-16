@@ -26,7 +26,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 @BlockCloverModElements.ModElement.Tag
 public class PlayerStats extends BlockCloverModElements.ModElement {
-
+	
 	//Base Stats
 	public double maxMana;
 	public double mana;
